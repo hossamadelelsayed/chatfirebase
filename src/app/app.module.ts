@@ -12,30 +12,47 @@ import {AngularFireModule} from "angularfire2";
 import {AngularFireAuth} from "angularfire2/auth/auth";
 import { AuthProvider } from '../providers/auth/auth';
 import {TabsPage} from "../pages/tabs/tabs";
+import {ChatsPage} from "../pages/chats/chats";
+import {GroupsPage} from "../pages/groups/groups";
+import {ProfilePage} from "../pages/profile/profile";
+import { UserProvider } from '../providers/user/user';
+import {SignupPage} from "../pages/signup/signup";
+import {ProfilepicPage} from "../pages/profilepic/profilepic";
 
 @NgModule({
   declarations: [
     MyApp,
     LoginPage,
-    TabsPage
+    TabsPage ,
+    ChatsPage ,
+    GroupsPage ,
+    ProfilePage ,
+    SignupPage ,
+    ProfilepicPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp) ,
+    IonicModule.forRoot(MyApp,{tabsPlacement : 'top'}) ,
     AngularFireModule.initializeApp(config)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     LoginPage ,
-    TabsPage
+    TabsPage ,
+    ChatsPage ,
+    GroupsPage ,
+    ProfilePage ,
+    SignupPage ,
+    ProfilepicPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler} ,
     AngularFireAuth,
-    AuthProvider
+    AuthProvider,
+    UserProvider
   ]
 })
 export class AppModule {}

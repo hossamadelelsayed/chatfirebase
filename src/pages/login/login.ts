@@ -3,6 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import {usercreds} from "../../models/interfaces/usercreds";
 import {AuthProvider} from "../../providers/auth/auth";
 import {TabsPage} from "../tabs/tabs";
+import {SignupPage} from "../signup/signup";
 
 /**
  * Generated class for the LoginPage page.
@@ -32,5 +33,8 @@ export class LoginPage {
     }).catch((res)=>{
       alert(res);
     });
+  }
+  signup() {
+    this.navCtrl.push(SignupPage);
   }
 }
