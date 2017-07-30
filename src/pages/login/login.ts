@@ -4,6 +4,7 @@ import {usercreds} from "../../models/interfaces/usercreds";
 import {AuthProvider} from "../../providers/auth/auth";
 import {TabsPage} from "../tabs/tabs";
 import {SignupPage} from "../signup/signup";
+import {PasswordresetPage} from "../passwordreset/passwordreset";
 
 /**
  * Generated class for the LoginPage page.
@@ -36,5 +37,8 @@ export class LoginPage {
   }
   signup() {
     this.navCtrl.push(SignupPage);
+  }
+  passwordreset() {
+    this.navCtrl.push(PasswordresetPage);
   }
 }

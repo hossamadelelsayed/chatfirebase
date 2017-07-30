@@ -18,6 +18,11 @@ import {ProfilePage} from "../pages/profile/profile";
 import { UserProvider } from '../providers/user/user';
 import {SignupPage} from "../pages/signup/signup";
 import {ProfilepicPage} from "../pages/profilepic/profilepic";
+import {PasswordresetPage} from "../pages/passwordreset/passwordreset";
+import { ImghandlerProvider } from '../providers/imghandler/imghandler';
+import {File} from "@ionic-native/file";
+import {FilePath} from "@ionic-native/file-path";
+import {FileChooser} from "@ionic-native/file-chooser";
 
 @NgModule({
   declarations: [
@@ -28,7 +33,8 @@ import {ProfilepicPage} from "../pages/profilepic/profilepic";
     GroupsPage ,
     ProfilePage ,
     SignupPage ,
-    ProfilepicPage
+    ProfilepicPage ,
+    PasswordresetPage
   ],
   imports: [
     BrowserModule,
@@ -44,7 +50,8 @@ import {ProfilepicPage} from "../pages/profilepic/profilepic";
     GroupsPage ,
     ProfilePage ,
     SignupPage ,
-    ProfilepicPage
+    ProfilepicPage ,
+    PasswordresetPage
   ],
   providers: [
     StatusBar,
@@ -52,7 +59,11 @@ import {ProfilepicPage} from "../pages/profilepic/profilepic";
     {provide: ErrorHandler, useClass: IonicErrorHandler} ,
     AngularFireAuth,
     AuthProvider,
-    UserProvider
+    UserProvider,
+    ImghandlerProvider ,
+    File ,
+    FilePath ,
+    FileChooser
   ]
 })
 export class AppModule {}
