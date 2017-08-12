@@ -23,7 +23,10 @@ import { ImghandlerProvider } from '../providers/imghandler/imghandler';
 import {File} from "@ionic-native/file";
 import {FilePath} from "@ionic-native/file-path";
 import {FileChooser} from "@ionic-native/file-chooser";
-
+import {BuddiesPage} from "../pages/buddies/buddies";
+import { RequestsProvider } from '../providers/requests/requests';
+import { ChatProvider } from '../providers/chat/chat';
+import { BuddychatPage } from "../pages/buddychat/buddychat";
 @NgModule({
   declarations: [
     MyApp,
@@ -34,7 +37,9 @@ import {FileChooser} from "@ionic-native/file-chooser";
     ProfilePage ,
     SignupPage ,
     ProfilepicPage ,
-    PasswordresetPage
+    PasswordresetPage ,
+    BuddiesPage ,
+    BuddychatPage
   ],
   imports: [
     BrowserModule,
@@ -51,7 +56,9 @@ import {FileChooser} from "@ionic-native/file-chooser";
     ProfilePage ,
     SignupPage ,
     ProfilepicPage ,
-    PasswordresetPage
+    PasswordresetPage , 
+    BuddiesPage ,
+    BuddychatPage
   ],
   providers: [
     StatusBar,
@@ -63,7 +70,9 @@ import {FileChooser} from "@ionic-native/file-chooser";
     ImghandlerProvider ,
     File ,
     FilePath ,
-    FileChooser
+    FileChooser,
+    RequestsProvider,
+    ChatProvider
   ]
 })
 export class AppModule {}
